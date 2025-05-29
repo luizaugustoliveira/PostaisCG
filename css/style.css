@@ -30,11 +30,11 @@ img {
 
 .estrutura {
   display: grid;
-  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-columns: minmax(160px, 1fr) 5fr;
   grid-template-areas:
-    'header header header'
-    'sidenav content anuncios'
-    'footer footer footer';
+    'header header'
+    'sidenav content '
+    'footer footer';
 }
 
 /*HEADER*/
@@ -84,7 +84,8 @@ img {
 }
 
 .sidenav li a {
-  display: block;
+  display: grid;
+  justify-content: center;
   min-width: 60px;
   max-width: 100px;
   margin: 0 auto 30px auto;
@@ -154,37 +155,6 @@ p {
   font-style: italic;
 }
 
-/*CARACTERISTICAS*/
-
-.caracteristicas {
-  display: flex;
-  align-items: flex-start;
-}
-
-.caracteristicas > div {
-  width: 80px;
-  text-align: center;
-  background: linear-gradient(135deg, #8844ee, #b07dfb);
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
-  position: relative;
-}
-
-.caracteristicas > div:first-child {
-  margin-right: 30px;
-}
-
-.caracteristicas span {
-  display: block;
-  color: #b07dfb;
-}
-
-.numero {
-  font-size: 3em;
-  line-height: 1;
-  margin: 10px auto;
-}
-
 .rotulo {
   background: white;
   border-radius: 0 0 5px 5px;
@@ -226,17 +196,6 @@ p {
 
 .atributos li + li {
   border-top: 2px solid #b07dfb;
-}
-
-/*ANUNCIOS*/
-
-.anuncios {
-  grid-area: anuncios;
-  background: #fafbfc;
-  display: grid;
-  align-content: start;
-  padding: 30px;
-  gap: 30px;
 }
 
 /*FOOTER*/
